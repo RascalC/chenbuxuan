@@ -16,7 +16,7 @@
 					   var layer = layui.layer;
 					   layer.open({
 					   	type: 1,
-					   	title: "2020倒计时",
+					   	title: "2025倒计时",
 					   	anim: 2,
 					   	area: ['600px', '500px'],
 					   	content: $(".newYear"),
@@ -28,7 +28,7 @@
 				 
 				 var isOpen=1;
 				 var setInterval2=setInterval(function() {
-					 if(new Date().getTime()-new Date("2020/1/2 00:00:00").getTime()>0){
+					 if(new Date().getTime()-new Date("2023/5/27 00:00:00").getTime()>0){
 						 isOpen=-1;
 					 }
 					 if(isOpen==1){
@@ -37,10 +37,10 @@
 					 }else if(isOpen==-1){
 						 return;
 					 }
-					 console.log((new Date("2020/1/1 00:00:00").getTime()-new Date().getTime())/1000)
+					 console.log((new Date("2025/1/1 00:00:00").getTime()-new Date().getTime())/1000)
 					 $(".endSeconds").html(Math.ceil((new Date("2020/1/1 00:00:00").getTime()-new Date().getTime())/1000)+" 秒")
-					 if(new Date("2020/1/1 00:00:00").getTime()-new Date().getTime()<=0){
-						$(".endTitle1").html("2020 年");
+					 if(new Date("2023/5/27 00:00:00").getTime()-new Date().getTime()<=0){
+						$(".endTitle1").html("2025 年");
 					 	$(".endSeconds").html("祝你事事如意");
 						$(".endTitle2").show();
 						$(".newYear").css("background-image","url(img/gif011.gif)")
@@ -51,20 +51,20 @@
 				 
 				var setInterval1=setInterval(function() {
 					let nTime = new Date();
-					dateDiff(nTime, "2019/11/24 0:0:0");
+					dateDiff(nTime, "2023/05/27 0:0:0");
 					// console.log(formartDate(nTime));
 					// console.log("时间差：" + dTime);
 				}, 1000)
 
 				function dateDiff(nTime, sTime) {
 					if (sTime == null || sTime == "") {
-						sTime = "2019/11/24 0:0:0";
+						sTime = "2023/05/27 0:0:0";
 					}
 					let day1 = new Date(sTime).getTime();
 					let iDays = (nTime.getTime() - day1) / (1000 * 60 * 60 * 24); //天数
 					let iHours = (nTime.getTime() - day1) / (1000 * 60 * 60); //小时数
 					let iMinutes = (nTime.getTime() - day1) / (1000 * 60); //分钟数
-					$("#sTime").html("开始时间: " + "2022-05-27 21:10:00");
+					$("#sTime").html("开始时间: " + "2023-05-27 21:10:00");
 					$("#nTime").html("当前时间: " + formartDate(nTime));
 					$("#dDays").html("相爱天数: " + iDays.toFixed(13) + "天");
 					$("#dHour").html("相爱小时: " + iHours.toFixed(10) + "小时");
@@ -168,7 +168,7 @@
 			<br />
 		</div>
 		<footer id="author">
-			<p>@小陈同学</p>
+			<p>@妮子</p>
 			<p>萬事勝意 平安喜樂</p>
 		</footer>
 	</body>
